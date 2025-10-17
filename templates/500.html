@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="section error-page">
+        <h1>{% block title %} 500 Internal Server Error {% endblock %}</h1>
+        <p>OOOOPS! Something went wrong on the server.</p>
+        <p>We are currently working on this issue. Please try again later.</p>
+    </div>
+{% endblock %}

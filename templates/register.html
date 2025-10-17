@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section">
+    <h2 class="title">Sign Up</h2>
+    <div class="form">
+        <form method="POST" action="/register">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <button class="form-button">Sign Up</button>
+            <p>
+            Already have an account? <a href="/login">Login here</a>.
+        </p>
+        </form>
+    </div>
+</div>
+{% endblock %}
