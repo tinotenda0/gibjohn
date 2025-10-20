@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}GibJohn{% endblock %}</title>
     <link rel="stylesheet" href="/static/styles.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="favicon" href="/static/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -39,17 +41,38 @@
 
 {% if current_user.is_authenticated %}
 <div class="sidebar">
-
 <div class="left-right-columns">
   <div class="sidebar-avatar">
       <img src="{{ current_user.gravatar(256) }}" alt="Profile Picture" class="avatar" width="75px" height="75px">
   </div>
   <div class="user-details">
       <p style="font-weight: bold">{{ current_user.name }}</p>
-      <a href="/profile"><p style="font-size: x-small; color: dodgerblue">{{ current_user.email }}</p></a>
+      <a href="/profile"><p style="font-size: x-small">{{ current_user.email }}</p></a>
   </div>
 </div>
+    <div>
+        <h2>Quick Links</h2>
+        <a href="/attendance"><p>My Attendance</p></a>
+        <a href="/timetable"><p>My Timetable</p></a>
+        <a href="/profile"><p>My Profile</p></a>
+        <a href="/tutors"><p>My Tutors</p></a>
+    </div>
 
+    <div>
+        <h2>Frequently Used</h2>
+        <a href="/chats"><p>Chats</p></a>
+        <a href="/groups"><p>Groups</p></a>
+        <a href="/timetable"><p>My Timetable</p></a>
+        <a href="/library"><p>Library</p></a>
+    </div>
+
+    <div>
+        <h2>Useful Links</h2>
+        <a href="/support"><p>Support</p></a>
+        <a href="/faqs"><p>FAQs</p></a>
+        <a href="/logout"><p>Logout</p></a>
+
+    </div>
 </div>
 {% endif %}
 

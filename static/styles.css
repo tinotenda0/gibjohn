@@ -1,13 +1,14 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-background-image: url("/static/bg.png");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center center;
+  background-image: url("/static/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   min-height: 100vh;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .comfortaa-regular {
@@ -311,27 +312,24 @@ input:focus {
 }
 
 .footer {
-  float: left;
   padding: 20px;
-  bottom: 0;
   margin: 20px;
+  margin-top: auto;
   align-content: center;
   justify-content: center;
   text-align: center;
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
   border-radius: 25px;
-  width: 95%;
+  width: calc(100% - 80px);
   box-shadow: 0 4px 4px rgba(0,0,0,0.24);
 }
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   float: left;
-  /*top: 120px;*/
-  /*right: 32px;*/
+    height: fit-content;
   left: 30px;
-  /*width: calc(100% - 280px - 140px);*/
-  width: 20%;
+  max-width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,6 +342,29 @@ input:focus {
   background-color: #FFFFFF;
   border-radius: 25px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.24);
+}
+
+.sidebar a {
+  color: #0292FD;
+  text-decoration: underline;
+  transition: color .2s;
+}
+
+.sidebar a:hover {
+  color: #cccccc;
+}
+
+.sidebar h2 {
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.sidebar hr {
+    margin: 10px 0;
 }
 
 

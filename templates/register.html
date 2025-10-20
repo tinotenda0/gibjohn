@@ -5,21 +5,28 @@
     <h2 class="title">Sign Up</h2>
     <div class="form">
         <form method="POST" action="/register">
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
+            <div>
+                <label>Email</label>
+                <div>
+                    <label>
+                        <input type="email" name="email" placeholder="Email" autofocus required>
+                    </label>
                 </div>
             </div>
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
+                    <label>
+                        <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="" required>
+                    </label>
                 </div>
             </div>
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                    <label>
+                        <input class="input is-large" type="password" name="password" placeholder="Password" required>
+                    </label>
                 </div>
             </div>
             <button class="form-button">Sign Up</button>
