@@ -3,7 +3,7 @@
 {% block title %}My Profile{% endblock %}
 {% block content %}
 
-    <div class="container">
+    <div class="section">
     <h1 class="title">My Profile</h1>
     <h2>Welcome {{ current_user.name }}</h2>
         <img src="{{ current_user.gravatar(256) }}" alt="Profile Picture" class="avatar" width="120px" height="120px">

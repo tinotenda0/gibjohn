@@ -142,7 +142,7 @@ body {
   position: fixed;
   float: left;
   width: 93%;
-  margin: 20px;
+  margin-left: 20px;
   background: #fff;
   border-radius: 48px;
   display: flex;
@@ -278,27 +278,6 @@ input:focus {
     font-size: 24px;
 }
 
-.container{
-  position: relative;
-  float: right;
-  /*top: 120px;*/
-  right: 30px;
-  /*width: calc(100% - 280px - 140px);*/
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
-  margin: 0;
-  margin-bottom: 20px;
-  align-content: center;
-  text-align: center;
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.24);
-}
-
 .section {
   padding: 20px;
   margin:auto auto;
@@ -322,49 +301,6 @@ input:focus {
   border-radius: 25px;
   width: calc(100% - 80px);
   box-shadow: 0 4px 4px rgba(0,0,0,0.24);
-}
-
-.sidebar {
-  position: absolute;
-  float: left;
-    height: fit-content;
-  left: 30px;
-  max-width: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
-  margin: 0;
-  margin-bottom: 20px;
-  align-content: center;
-  text-align: center;
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.24);
-}
-
-.sidebar a {
-  color: #0292FD;
-  text-decoration: underline;
-  transition: color .2s;
-}
-
-.sidebar a:hover {
-  color: #cccccc;
-}
-
-.sidebar h2 {
-    letter-spacing: 1px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.sidebar hr {
-    margin: 10px 0;
 }
 
 

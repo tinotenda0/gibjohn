@@ -39,43 +39,6 @@
   </nav>
 </div>
 
-{% if current_user.is_authenticated %}
-<div class="sidebar">
-<div class="left-right-columns">
-  <div class="sidebar-avatar">
-      <img src="{{ current_user.gravatar(256) }}" alt="Profile Picture" class="avatar" width="75px" height="75px">
-  </div>
-  <div class="user-details">
-      <p style="font-weight: bold">{{ current_user.name }}</p>
-      <a href="/profile"><p style="font-size: x-small">{{ current_user.email }}</p></a>
-  </div>
-</div>
-    <div>
-        <h2>Quick Links</h2>
-        <a href="/attendance"><p>My Attendance</p></a>
-        <a href="/timetable"><p>My Timetable</p></a>
-        <a href="/profile"><p>My Profile</p></a>
-        <a href="/tutors"><p>My Tutors</p></a>
-    </div>
-
-    <div>
-        <h2>Frequently Used</h2>
-        <a href="/chats"><p>Chats</p></a>
-        <a href="/groups"><p>Groups</p></a>
-        <a href="/timetable"><p>My Timetable</p></a>
-        <a href="/library"><p>Library</p></a>
-    </div>
-
-    <div>
-        <h2>Useful Links</h2>
-        <a href="/support"><p>Support</p></a>
-        <a href="/faqs"><p>FAQs</p></a>
-        <a href="/logout"><p>Logout</p></a>
-
-    </div>
-</div>
-{% endif %}
-
 <main>
     {% block content %}{% endblock %}
 </main>
