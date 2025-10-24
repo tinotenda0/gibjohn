@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} {{ course.name }} Details {% endblock %}
+{% block content %}
+
+    <div class="section">
+    <h1 class="title">{{ course.name }} Details</h1>
+    <div class="course-details">
+        <h2 class="course-title">{{ course.title }}</h2>
+        <p class="course-category"><strong>Category:</strong> {{ course.category }}</p>
+        {% if current_user.role.value == 'tutor' %}
+            <a class="form-button" href="/courses/{{ course.id }}/edit">Edit Course</a>
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%  block title %}Edit {{ course.name }}{% endblock %}
+{% block content %}
+
+    <div class="section">
+    <h1 class="title">Edit {{ course.name }}</h1>
+    <form method="POST" action="/courses/{{ course.id }}/edit">
+        <div class="field">
+            <label class="label">Course Title</label>
+            <div class="control">
+                <input class="input" type="text" name="title" value="{{ course.title }}" required>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Course Category</label>
+            <div class="control">
+                <textarea class="textarea" name="category" required>{{ course.category }}</textarea>
+            </div>
+        </div>
+        <button class="form-button" type="submit">Update Course</button>
+    </form>
+    </div>
+{% endblock %}}

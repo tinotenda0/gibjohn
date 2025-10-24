@@ -1,8 +1,73 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Welcome, {{ current_user.name }}!
-</h1>
+
+<div class="noti-bar-container">
+    <div class="noti-bar">
+    <form method="GET" action="/404">
+        <div class="field has-addons">
+            <div class="control is-expanded">
+                <input class="noti-bar" type="text" name="query" placeholder=" No new notifications" readonly="readonly">
+            </div>
+            <div class="control">
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+<div id ="search-bar" class="search-bar-container">
+    <form method="GET" action="/404">
+        <div class="field has-addons">
+            <div class="control is-expanded">
+                <input class="search-bar" type="text" name="query" placeholder=" Search anything...">
+            </div>
+            <div class="control">
+            </div>
+        </div>
+    </form>
+</div>
+
+    <div id="hero" class="section dash-hero">
+    <h1>Welcome Back {{ current_user.name }}</h1>
+    <p class="subtitle">Here's a demo of what the messages would look like</p>
+    <div class="message-container">
+    <div class="user-avatar-card">
+        {% for user in users[:9] %}
+                <img src="{{ user.gravatar(256) }}" alt="{{ user.name }}'s avatar" class="user-avatar-image">
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+
+    <div class="section dash-assignments-grid">
+  <div class="dash-assignments-card">
+    <div class="card-header">
+      <img src="/static/assignment_1.png" alt="Assignment 1 image">
+      <div>
+        <div class="card-title">Exploring the Impact of Modern Technology in Everyday Life</div>
+        <div class="card-meta">
+          <span><i class="iconoir-calendar"></i>Today</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+  </div>
+  <div class="vertical-divider"></div>
+  <div class="dash-assignments-card">
+    <div class="card-header">
+      <img src="/static/assignment_2.png" alt="Assignment 2 image">
+      <div>
+        <div class="card-title">Understanding Modern Computer Hardware Components</div>
+        <div class="card-meta">
+          <span><i class="iconoir-calendar"></i>14 December 2025</span>
+        </div>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 {% endblock %}

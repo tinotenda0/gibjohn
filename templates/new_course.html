@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Create New Course{% endblock %}
+{% block content %}
+
+    <div class="section">
+    <h1 class="title">Create New Course</h1>
+    <form method="POST" action="/courses/new">
+        <div class="field">
+            <label class="label">Course Title</label>
+            <div class="control">
+                <input class="input" type="text" name="title" placeholder="Enter course title" required>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Course Category</label>
+            <div class="control">
+                <textarea class="textarea" name="category" placeholder="Enter course category" required></textarea>
+            </div>
+        </div>
+        <button class="form-button" type="submit">New Course</button>
+    </form>
+    </div>
+{% endblock %}
