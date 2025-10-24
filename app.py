@@ -9,6 +9,9 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+
+
+
 #importing database models
 from models import User, Course, Enrollment, Roles
 
@@ -16,8 +19,8 @@ from models import User, Course, Enrollment, Roles
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("POSTGRES_URL").replace("postgres://", "postgresql://")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = os.environ.get("SECRET_KEY", 'cb0aab5c73d0a14b3d74b62a407b8539beb10ffe480389d0a70f746cea0b7bda')
 
-print("Loaded POSTGRES_URL:", app.config['SQLALCHEMY_DATABASE_URI'])
 
 #Database connection
 engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'], echo=False, future=True)
