@@ -32,6 +32,18 @@
     <p>
         Already have an account? <a href="/login">Login here</a>.
     </p>
+    <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+      {% for category, message in messages %}
+        <div class="notification {{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
 </form>
 <script>
     const tutorBuzzword = "iamarealtutor";
