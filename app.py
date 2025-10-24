@@ -249,6 +249,10 @@ def profile():
             db.close()
     return render_template('profile.html')
 
+@app.route('/feedback')
+def feedback ():
+    return render_template('feedback.html')
+
 login_manager.init_app(app)
 
 if __name__ == '__main__':
