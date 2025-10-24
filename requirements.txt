@@ -1,3 +1,4 @@
+python-dotenv
 django-livereload
 flask-bcrypt
 flask-login

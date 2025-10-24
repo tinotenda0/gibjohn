@@ -5,14 +5,19 @@ from flask_login import LoginManager, current_user, login_user, logout_user, log
 from flask_bcrypt import Bcrypt
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 #importing database models
 from models import User, Course, Enrollment, Roles
 
 # Configuring flask app
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '<KEY>'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("POSTGRES_URL").replace("postgres://", "postgresql://")
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+print("Loaded POSTGRES_URL:", app.config['SQLALCHEMY_DATABASE_URI'])
 
 #Database connection
 engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'], echo=False, future=True)
