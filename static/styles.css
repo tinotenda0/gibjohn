@@ -623,7 +623,8 @@ box-shadow: 0 2px 6px rgba(0,0,0,0.18);
     height: 112px;
 }
 
-.dash-assignments h1, p {
+.dash-assignments h1,
+.dash-assignments p {
   text-align: left;
   text-transform: uppercase;
 }
