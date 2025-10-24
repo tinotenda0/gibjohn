@@ -4,3 +4,4 @@ flask-bcrypt
 flask-login
 sqlalchemy
 flask
+psycopg2-binary
